@@ -8,7 +8,7 @@ var separator = url.indexOf('?') > -1 ? '&' : '?';
 url += separator + encodeURIComponent("foo") + "=" + encodeURIComponent("bar");
 
 var url = new URI("http://example.org/foo?bar=bax");
-url.addQuery("foo", "bar');
+url.addQuery("foo", "bar");
 
 URI("http://example.org/foo.html?hello=world")
   .username("rodneyrehm")

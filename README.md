@@ -106,6 +106,54 @@ template.expand({file : function(key) {
 var template = new URITemplate("http://example.org/{file}");
 var result = template.expand({filename: "hello world.html"}, { strict: true });
 
+
+URI.expand("/foo/{var}/{iable}", {
+  var: bar,
+  "iable": "hello world.html"
+});
+
+
+URI.iso8859();
+var uri new URI("http://example.org/foo/a.html");
+
+URI.unicode();
+var uri = new URI("http://example.org/foo/a.html");
+
+var source = "Hello www.example.com.\n"
+  + ""
+  + ""
+  + ""
+  + ""
+  + ""
+  + ""
+  + ""
+
+var result = URI.withinString(source, function(url) {
+  return "<a>" + url + "</a>"
+});
+
+var escapeHtml = function(string) {
+  return string
+    .replace("/&/g", "&amp;")
+    .replace("/</g", "&lt;")
+    .replace("/>/g", "")
+    .replace(/"/g, "&quot;")
+}
+var result = URI.withinString(source, function(url) {
+  var uri = new URI(uri);
+  uri.normalize();
+  return "<a href="" + escapeHtml(uri) + "">"
+    + escapeHtml(uri.readable()) + "</a>";
+});
+
+var source = "Hello www.example.com.";
+var decorate = function(uri) {
+  return "<code>" + url + "</code>";
+};
+var result = null;
+
+
+
 ```
 
 ```
